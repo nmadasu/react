@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import {Greet} from './components/Greet'
+import { Greet } from './components/Greet'
 import Welcome from './components/Welcome';
 import Hello from './components/Hello';
 import Message from './components/Message';
@@ -16,55 +16,33 @@ import './components/appStyle.css'
 import styles from './components/appStyle.module.css'
 import ClassForm from './components/ClassForm';
 import { MultiTable } from './components/MultiTable';
-import {Cards} from './components/Card'
+import { Cards } from './components/Card'
 import FunctionForm from './components/FunctionForm';
-
+import { BrowserRouter as Router, Route, Switch, Link, Routes } from 'react-router-dom';
+import Service from './components/Service';
+import Post from './components/Post';
+import GetData from './components/GetData';
+import PostData from './components/PostData';
+import Crud from './components/Crud';
+import CreateData from './components/CreateData';
+import AddData from './components/AddData';
+import Editdata from './components/Editdata';
 function App() {
   return (
-    <div className="App">
-      {/* <Cards></Cards> */}
-      <FunctionForm></FunctionForm>
-      {/* <MultiTable></MultiTable> */}
-      {/* <ClassForm></ClassForm> */}
-      {/* <h1 className='error'>Error</h1> */}
-
-      {/* <h1 className={styles.success}>Success</h1> */}
-
-      {/* <Inline></Inline> */}
-
-      {/* <StyleSheet primary={false}></StyleSheet> */}
-
-      {/* <NameList></NameList> */}
-
-      {/* <UserGreting></UserGreting> */}
-      
-      {/*<ParentComponent></ParentComponent> */}
-
-      {/* <FunctionClick></FunctionClick> */}
-      {/* <ClassClick></ClassClick> */}
-
-      {/* <Counter></Counter> */}
-
-      {/* <Message></Message> */}
-
-     {/* {<Greet name='Bruce' heroName='Batman'>
-      <p>this is children props</p>
-     </Greet> } */}
-
-     {/* <Greet name='Bruce' heroName='SuperMan'>
-      <button>ACtion</button>
-     </Greet> */}
-
-     {/* <Welcome name='Bruce' heroName='Batman'>
-     <p>this is children props</p>
-     <button>ACtion</button>
-     </Welcome> */}
-
-     {/* <Welcome name='Bruce' heroName='SuperMan'></Welcome>  */}
-
-     {/* <Hello/> */}
-
-    </div>
+   <div>
+    <Routes>
+      <Route path='/post' element={<Post></Post>}></Route>
+      <Route path='/function' element={<FunctionForm></FunctionForm>}></Route>
+      <Route path='/table' element={<MultiTable></MultiTable>}></Route>
+      <Route path='service' element={<Service></Service>}></Route>
+      <Route path='/' element={<CreateData></CreateData>}></Route>
+      <Route path='/add' element={<AddData></AddData>}></Route>
+      <Route path='/create' element={<PostData></PostData>}></Route>
+      <Route path='/edit/:id' element={<Editdata></Editdata>}></Route>
+      <Route path='/crud' element={<Crud></Crud>}></Route>
+    </Routes>
+    {/* <FunctionForm></FunctionForm> */}
+   </div>
   );
 }
 
