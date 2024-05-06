@@ -45,6 +45,14 @@ import UseReducerFetchData from './components/UseReducerFetchData';
 import Parent from './components/Parent';
 import UseMemo from './components/UseMemo';
 import UseRef from './components/UseRef';
+import UseRef2 from './components/UseRef2';
+import Counter1 from './components/Counter1';
+import Counter2 from './components/Counter2';
+import CustomForm from './components/CustomForm';
+import UseReducerRender from './components/UseReducerRender';
+import UseStateRender from './components/UseStateRender';
+import ObjectUseState from './components/ObjectUseState';
+import ArrayUseState from './components/ArrayUseState';
 
 export const UserContext = React.createContext()
 export const ChannelContext = React.createContext()
@@ -101,18 +109,26 @@ function App() {
       <UseReduder2></UseReduder2>
       <UseReducerMultiple></UseReducerMultiple> */}
 
-      <countContex.Provider 
+      {/* <countContex.Provider 
       value={{countState:count,countDispatch:dispatch}}
       >
         Count: {count}
         <ComponentA></ComponentA>
         <ComponentB></ComponentB>
         <ComponentC></ComponentC>
-      </countContex.Provider>
-      <UseReducerFetchData></UseReducerFetchData>
-      <Parent></Parent>
-      <UseMemo></UseMemo>
-      <UseRef></UseRef>
+      </countContex.Provider> */}
+      {/* <UseReducerFetchData></UseReducerFetchData> */}
+      {/* <Parent></Parent> */}
+      {/* <UseMemo></UseMemo> */}
+      {/* <UseRef></UseRef>
+      <UseRef2></UseRef2> */}
+      {/* <Counter1></Counter1>
+      <Counter2></Counter2>
+      <CustomForm></CustomForm> */}
+      <UseReducerRender></UseReducerRender>
+      <UseStateRender></UseStateRender>
+      <ObjectUseState></ObjectUseState>
+      <ArrayUseState></ArrayUseState>
     </div>
   );
 }
